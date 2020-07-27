@@ -23,7 +23,9 @@ function App() {
             checkedIcon={false}
             onColor={'transparent'}
             offColor={'transparent'}
-            onChange={() => setPriceView(e => e === 'monthly' ? 'annually' : 'monthly')} checked={priceView === 'monthly'}
+            onChange={() => setPriceView(e => e === 'monthly' ? 'annually' : 'monthly')} 
+            checked={priceView === 'monthly'}
+            aria-checked={priceView === 'monthly'}
             />
           <label htmlFor='price-view-switch'>Monthly</label>
         </div>
