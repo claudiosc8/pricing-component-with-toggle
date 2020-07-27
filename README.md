@@ -1,5 +1,7 @@
 # Frontend Mentor - File Transfer pricing component
 
+**Check the deployed app [here](https://pricing-component-with-toggle-sooty.vercel.app)**
+
 ![Design preview for the File Transfer pricing component coding challenge](./design/desktop-preview.jpg)
 
 ## Welcome! 👋
