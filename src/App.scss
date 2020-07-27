@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+$Dark-Grayish-Blue: hsl(232, 13%, 33%);
+$Grayish-Blue: hsl(233, 13%, 49%);
+$Very-Light-Grayish-Blue: hsl(240, 78%, 98%);
+$Light-Grayish-Blue: hsl(234, 14%, 74%);
+
+$Gradient-color1: hsl(236, 72%, 79%);
+$Gradient-color2: hsl(237, 63%, 64%);
+
+@function gradient($angle) { 
+  @return linear-gradient($angle * 1deg, $Gradient-color1, $Gradient-color2); 
+}
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html, body {
+  height:100%;
+  min-height: 100vh;
+  margin:0;
+  height:0;
+}
+
+body {
+  background-color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  background: url('./images/bg-bottom.svg') left bottom no-repeat, url('./images/bg-top.svg') right top no-repeat, $Very-Light-Grayish-Blue;
+  font-weight: 700;
+  font-size: 18px;
+  position: relative;
+}
+
+
+#root {
+  min-height: 100%;
+  width:100%;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1150px;
+  padding-left:24px;
+  padding-right:24px;
+  padding-top:48px;
+  padding-bottom:48px;
+  margin:0 auto;
+}
+
+.react-switch-bg {
+  background:gradient(90);
+}
+
+h1 {
+  font-size: 32px;
+  padding:0;
+  margin:0;
+  margin-bottom:18px;
+  color:$Grayish-Blue;
+  text-align: center;
+}
+
+.price-switch {
+  margin:0 auto;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  padding-top:18px;
+  padding-bottom:18px;
+  label {
+    font-size: 15px;
+    color:$Light-Grayish-Blue;
+    margin:10px 24px;
+  }
+}
+
+#pricing {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top:0;
+  .plan-card {
+    background:#fff;
+    flex: 0 0 350px;
+    border-radius:10px;
+    padding: 35px 30px 30px;
+    text-align: center;
+    margin-bottom:32px;
+    color:$Grayish-Blue;
+    box-shadow: 0 15px 30px fade-out($Grayish-Blue, .9);
+    &:first-child {
+      border-radius:10px 0 0 10px;
+    }
+    &:last-child {
+      border-radius:0 10px 10px 0;
+    }
+    &.featured {
+      background: gradient(135);
+      padding: 59px 30px 54px;
+      color:#fff;
+      .plan-name {
+        color:#fff;
+      }
+      .plan-price {
+        color: #fff;
+      }
+      .plan-features li {
+        color:$Very-Light-Grayish-Blue;
+        border-color:#9ea4f8;
+      }
+      .button {
+        background: #fff;
+        color: $Gradient-color2;
+        &:hover {
+          background:transparent;
+          box-shadow: inset 0 0 0 1px #fff;
+          color:#fff;
+        }
+      }
+    }
+    .plan-name {
+      font-size: 18px;
+    }
+    .plan-price {
+      display: flex;
+      justify-content: center;
+      align-items:center;
+      padding:24px 0;
+      color:$Dark-Grayish-Blue;
+      .currency {
+        font-size: 40px;
+        margin-right: 5px;
+      }
+      .price {
+        font-size: 72px;
+        letter-spacing: -2px;
+      }
+    }
+    .plan-features {
+      padding:0;
+      margin:0;
+      margin-bottom: 32px;
+      li {
+        list-style: none;
+        padding:18px 0;
+        margin:0;
+        font-size: 15px;
+        border-color:#dadada;
+        border-bottom-style:solid;
+        border-bottom-width:1px;
+        &:first-child {
+          border-top-style:solid;
+          border-top-width:1px;
+        }
+      }
+    }
+    .button {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      padding:16px;
+      width: 100%;
+      background:gradient(90);
+      color:#fff;
+      border-radius:5px;
+      cursor: pointer;
+      &:hover {
+        background:transparent;
+        box-shadow: inset 0 0 0 1px $Gradient-color2;
+        color:$Gradient-color2;
+      }
+    }
+  }
+
+}
+
+
+@media screen and (max-width: 768px) {
+  
+  body {
+      background: url('./images/bg-top.svg') 50vw -50% no-repeat, $Very-Light-Grayish-Blue;
+  }
+
+  #pricing {
+    .plan-card {
+      flex: 0 0 100%;
+      &:first-child {
+        border-radius:10px;
+      }
+      &:last-child {
+        border-radius:10px;
+      }
+    }
+
+  }
+
+}
