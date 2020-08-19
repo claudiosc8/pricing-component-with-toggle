@@ -2,6 +2,8 @@
 
 **Check the deployed app [here](https://pricing-component-with-toggle-sooty.vercel.app)**
 
+**Check the report on Frontend Mentor [here](https://www.frontendmentor.io/solutions/pricing-component-with-toggle-using-react-ko05s3vZl)**
+
 ![Design preview for the File Transfer pricing component coding challenge](./design/desktop-preview.jpg)
 
 ## Welcome! 👋
